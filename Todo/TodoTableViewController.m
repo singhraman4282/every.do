@@ -30,15 +30,15 @@
         [self.todoArray addObject:newtodo];
         [self.tableView reloadData];
 
-    UISwipeGestureRecognizer *swipeRightOrange = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToRightWithGestureRecognizer:)];
-    swipeRightOrange.direction = UISwipeGestureRecognizerDirectionRight;
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToRightWithGestureRecognizer:)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    swipeRight.delegate = self;
     
     
     
     
-    
-    
-    [self.tableView addGestureRecognizer:swipeRightOrange];
+    [self.tableView addGestureRecognizer:swipeRight];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -128,19 +128,22 @@
 -(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gesture {
     NSLog(@"Swiped");
     
-    TableViewCell *cell = (TableViewCell *) gesture;
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    
-      NSLog(@"Cell height is %@", [self.todoArray objectAtIndex:indexPath.row]);
-    
-    
+
+    CGPoint location = [gesture locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     
     
-    UIView *myView = [UIView new];
-//    CGRect frame = CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)
-//    NSLog(@"Cell height is %@", cel);
     
     
+    
+/*    if(indexPath)
+    {
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    todo *this = [self.todoArray objectAtIndex:indexPath.row];
+        this.status = @"completed";
+        [self.tableView reloadData];
+    }*/
 }
 
 
