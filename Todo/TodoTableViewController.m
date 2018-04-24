@@ -131,19 +131,14 @@
 
     CGPoint location = [gesture locationInView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     
-    
-    
-    
-    
-/*    if(indexPath)
+    if(indexPath)
     {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     todo *this = [self.todoArray objectAtIndex:indexPath.row];
         this.status = @"completed";
         [self.tableView reloadData];
-    }*/
+    }
 }
 
 
