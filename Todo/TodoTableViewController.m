@@ -10,6 +10,10 @@
 
 @interface TodoTableViewController ()
 //@property (nonatomic) todo *selectedTodo;
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *editOut;
+
+
 @end
 
 @implementation TodoTableViewController
@@ -22,12 +26,7 @@
         self.todoArray = [NSMutableArray new];
         
     }
-        todo *newtodo = [todo new];
-        newtodo.title = @"raman";
-        newtodo.taskDescription = @"raman";
-        newtodo.priority = @"High";
-        newtodo.status = @"Incomplete";
-        [self.todoArray addObject:newtodo];
+        
         [self.tableView reloadData];
 
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(slideToRightWithGestureRecognizer:)];
@@ -72,7 +71,8 @@
     cell.descLabel.text = todoo.taskDescription;
     cell.prioLabel.text = todoo.priority;
     cell.statusLabel.text = todoo.status;
-    
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@", todoo.deadline];
+//    cell.titleLabel.text = [NSString stringWithFormat:@"%@", todoo.deadline];
     
     return cell;
 }
@@ -139,6 +139,53 @@
         this.status = @"completed";
         [self.tableView reloadData];
     }
+}//slideToRight
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return true;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.todoArray removeObjectAtIndex:indexPath.row];
+    
+    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject: indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    
+    [self.tableView reloadData];
+}//edit
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return YES;
+}
+
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    
+    NSString *stringToMove = [self.todoArray objectAtIndex:sourceIndexPath.row];
+    [self.todoArray removeObjectAtIndex:sourceIndexPath.row];
+    [self.todoArray insertObject:stringToMove atIndex:destinationIndexPath.row];
+    
+    
+    
+    
+}//moveRow
+
+
+
+
+
+
+- (IBAction)editAct:(UIBarButtonItem *)sender {
+    
+    if (!self.tableView.editing) {
+    self.tableView.editing = true;
+    }//if not already editing
+    
+    else {
+        self.tableView.editing = false;
+    }
+    
+    
 }
 
 
@@ -151,15 +198,6 @@
 /*
  
  
- -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- return true;
- }
- 
- -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- todo *thisTodo = [self.todoArray objectAtIndex:indexPath.row];
- thisTodo.status = @"Completed";
- [self.tableView reloadData];
- }//edit
  
  
  -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {

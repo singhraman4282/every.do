@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *descLabel;
 @property (strong, nonatomic) IBOutlet UILabel *prioLabel;
 @property (strong, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end

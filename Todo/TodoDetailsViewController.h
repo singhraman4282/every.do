@@ -16,6 +16,6 @@
 @end
 
 
-@interface TodoDetailsViewController : UITableViewController <PriorityPickerViewControllerDelegate>
+@interface TodoDetailsViewController : UITableViewController <PriorityPickerViewControllerDelegate, UITextFieldDelegate>
 @property (nonatomic, weak) id <todoDetailsViewControllerDelegate> delegate;
 @end

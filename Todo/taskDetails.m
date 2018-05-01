@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *taskDetailsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *priorityLabel;
 @property (strong, nonatomic) IBOutlet UILabel *status;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 
 
 
@@ -28,6 +29,7 @@
    self.taskDetailsLabel.text = self.thisTodo.taskDescription;
     self.priorityLabel.text = self.thisTodo.priority;
     self.status.text = self.thisTodo.status;
+    self.dateLabel.text = [NSString stringWithFormat:@"%@", self.thisTodo.deadline];
     
     
     

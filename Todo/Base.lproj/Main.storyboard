@@ -33,11 +33,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoCell" rowHeight="87" id="odv-YV-pZv" customClass="TableViewCell">
-                                <rect key="frame" x="0.0" y="28" width="375" height="87"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoCell" rowHeight="120" id="odv-YV-pZv" customClass="TableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="odv-YV-pZv" id="kq8-nk-0To">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkY-kr-cUt">
@@ -49,40 +49,51 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps2-59-5es">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps2-59-5es">
                                             <rect key="frame" x="12" y="32" width="347" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAI-Fk-0Gc">
-                                            <rect key="frame" x="323.5" y="55" width="35.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAI-Fk-0Gc">
+                                            <rect key="frame" x="323.5" y="55" width="35.5" height="56"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSd-V7-Tic">
-                                            <rect key="frame" x="12" y="66" width="33" height="16"/>
+                                            <rect key="frame" x="12" y="64" width="33" height="16"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71a-nj-2cW">
+                                            <rect key="frame" x="12" y="88" width="351" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="71a-nj-2cW" firstAttribute="leading" secondItem="kq8-nk-0To" secondAttribute="leading" constant="12" id="3JR-by-pJy"/>
                                         <constraint firstItem="ZAI-Fk-0Gc" firstAttribute="bottom" secondItem="kq8-nk-0To" secondAttribute="bottomMargin" constant="2" id="7sY-ug-Jt9"/>
                                         <constraint firstItem="Ps2-59-5es" firstAttribute="top" secondItem="fkY-kr-cUt" secondAttribute="bottom" constant="4" id="9RD-40-Fby"/>
-                                        <constraint firstItem="JSd-V7-Tic" firstAttribute="leading" secondItem="kq8-nk-0To" secondAttribute="leading" constant="12" id="9l2-vK-9ts"/>
-                                        <constraint firstAttribute="bottom" secondItem="JSd-V7-Tic" secondAttribute="bottom" constant="4.5" id="Bj6-fp-bWi"/>
+                                        <constraint firstItem="JSd-V7-Tic" firstAttribute="leading" secondItem="kq8-nk-0To" secondAttribute="leading" constant="12" id="CMH-4y-jKW"/>
                                         <constraint firstItem="Ps2-59-5es" firstAttribute="leading" secondItem="kq8-nk-0To" secondAttribute="leading" constant="12" id="EqR-BM-DnD"/>
+                                        <constraint firstItem="JSd-V7-Tic" firstAttribute="top" secondItem="Ps2-59-5es" secondAttribute="bottom" constant="11" id="ICe-sQ-Txj"/>
+                                        <constraint firstAttribute="bottom" secondItem="71a-nj-2cW" secondAttribute="bottom" constant="10.5" id="Oij-3y-VP7"/>
                                         <constraint firstItem="ZAI-Fk-0Gc" firstAttribute="trailing" secondItem="kq8-nk-0To" secondAttribute="trailingMargin" id="Qkm-ld-tNh"/>
                                         <constraint firstAttribute="trailing" secondItem="fkY-kr-cUt" secondAttribute="trailing" constant="16" id="Qui-Yg-Y7A"/>
+                                        <constraint firstItem="71a-nj-2cW" firstAttribute="top" secondItem="JSd-V7-Tic" secondAttribute="bottom" constant="8" id="Y8A-gc-obw"/>
                                         <constraint firstItem="fkY-kr-cUt" firstAttribute="leading" secondItem="kq8-nk-0To" secondAttribute="leading" constant="12" id="dnE-qU-82I"/>
                                         <constraint firstItem="ZAI-Fk-0Gc" firstAttribute="top" secondItem="Ps2-59-5es" secondAttribute="bottom" constant="2" id="f5r-2o-AC1"/>
+                                        <constraint firstAttribute="trailing" secondItem="71a-nj-2cW" secondAttribute="trailing" constant="12" id="hnB-jf-RED"/>
                                         <constraint firstItem="fkY-kr-cUt" firstAttribute="top" secondItem="kq8-nk-0To" secondAttribute="top" constant="7" id="jUf-wv-JXX"/>
                                         <constraint firstAttribute="trailing" secondItem="Ps2-59-5es" secondAttribute="trailing" constant="16" id="kGX-4g-trZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateLabel" destination="71a-nj-2cW" id="zp9-ly-cM6"/>
                                     <outlet property="descLabel" destination="Ps2-59-5es" id="HmC-p5-KgX"/>
                                     <outlet property="prioLabel" destination="ZAI-Fk-0Gc" id="d7b-Nx-PJY"/>
                                     <outlet property="statusLabel" destination="JSd-V7-Tic" id="zJf-DL-y2X"/>
@@ -98,6 +109,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cWK-8z-FiU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="mZF-2V-nYV">
+                            <connections>
+                                <action selector="editAct:" destination="zPB-bE-6Pe" id="8cb-PB-WCZ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iTu-Iv-SVA">
                             <connections>
                                 <segue destination="VUe-qc-Tlw" kind="show" identifier="AddTodo" id="twU-pD-M0D"/>
@@ -105,6 +121,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="editOut" destination="mZF-2V-nYV" id="fAG-t2-2F7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fH-y6-LYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2H-wj-d01">
-                                <rect key="frame" x="125" y="241" width="124" height="30"/>
+                                <rect key="frame" x="125" y="311" width="124" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mark Completed"/>
                                 <connections>
@@ -173,18 +192,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1n-vF-ZHo">
+                                <rect key="frame" x="16" y="226" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="N5t-iN-pvQ" firstAttribute="top" secondItem="YkX-QZ-baq" secondAttribute="bottom" constant="26" id="01j-9q-F32"/>
                             <constraint firstItem="qU9-rZ-JVZ" firstAttribute="top" secondItem="N5t-iN-pvQ" secondAttribute="bottom" constant="22" id="1Yr-L9-T2K"/>
+                            <constraint firstItem="Sco-dI-ory" firstAttribute="trailing" secondItem="l1n-vF-ZHo" secondAttribute="trailing" constant="16" id="3RI-iD-WxX"/>
                             <constraint firstItem="Sco-dI-ory" firstAttribute="trailing" secondItem="YkX-QZ-baq" secondAttribute="trailing" constant="16" id="4TQ-sZ-BqF"/>
                             <constraint firstItem="UTV-nO-5Nd" firstAttribute="leading" secondItem="Sco-dI-ory" secondAttribute="leading" constant="16" id="MIL-03-aaJ"/>
                             <constraint firstItem="YkX-QZ-baq" firstAttribute="leading" secondItem="Sco-dI-ory" secondAttribute="leading" constant="16" id="Npz-Qv-XEN"/>
                             <constraint firstItem="YkX-QZ-baq" firstAttribute="top" secondItem="Sco-dI-ory" secondAttribute="top" constant="19" id="Ny5-Na-uCg"/>
                             <constraint firstItem="Sco-dI-ory" firstAttribute="trailing" secondItem="UTV-nO-5Nd" secondAttribute="trailing" constant="16" id="VP5-R8-4eg"/>
                             <constraint firstItem="qU9-rZ-JVZ" firstAttribute="leading" secondItem="Sco-dI-ory" secondAttribute="leading" constant="16" id="acf-bM-ukm"/>
+                            <constraint firstItem="l1n-vF-ZHo" firstAttribute="top" secondItem="UTV-nO-5Nd" secondAttribute="bottom" constant="8" id="fFa-6P-u8Y"/>
                             <constraint firstItem="UTV-nO-5Nd" firstAttribute="top" secondItem="qU9-rZ-JVZ" secondAttribute="bottom" constant="8" id="khr-Z6-nRT"/>
+                            <constraint firstItem="l1n-vF-ZHo" firstAttribute="leading" secondItem="Sco-dI-ory" secondAttribute="leading" constant="16" id="oYi-mv-p03"/>
                             <constraint firstItem="Sco-dI-ory" firstAttribute="trailing" secondItem="N5t-iN-pvQ" secondAttribute="trailing" constant="16" id="rWy-k9-TEO"/>
                             <constraint firstItem="Sco-dI-ory" firstAttribute="trailing" secondItem="qU9-rZ-JVZ" secondAttribute="trailing" constant="16" id="sla-w0-VP6"/>
                             <constraint firstItem="N5t-iN-pvQ" firstAttribute="leading" secondItem="Sco-dI-ory" secondAttribute="leading" constant="16" id="zOD-Fj-wwF"/>
@@ -193,6 +221,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Task Details" id="T8k-Zx-hXk"/>
                     <connections>
+                        <outlet property="dateLabel" destination="l1n-vF-ZHo" id="9Eo-XK-1nW"/>
                         <outlet property="priorityLabel" destination="qU9-rZ-JVZ" id="2I6-HR-nH0"/>
                         <outlet property="status" destination="UTV-nO-5Nd" id="XF6-fW-xPW"/>
                         <outlet property="taskDetailsLabel" destination="N5t-iN-pvQ" id="Gsa-M9-kLi"/>
@@ -285,6 +314,55 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Date" id="LH9-7C-mom">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="x0r-aG-GTZ" style="IBUITableViewCellStyleDefault" id="Ra0-PG-b6Y">
+                                        <rect key="frame" x="0.0" y="244" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ra0-PG-b6Y" id="FzG-eP-ynL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x0r-aG-GTZ">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Select Date" id="SeV-O4-UZ6">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="280" id="s3G-HB-3uJ">
+                                        <rect key="frame" x="0.0" y="316" width="375" height="280"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s3G-HB-3uJ" id="mI7-rO-tep">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="SZr-uv-FBh">
+                                                    <rect key="frame" x="0.0" y="63" width="375" height="216"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="546303691.02871799">
+                                                        <!--2018-04-24 23:01:31 +0000-->
+                                                    </date>
+                                                    <connections>
+                                                        <action selector="datePickerValueChanged:" destination="6KH-lN-npx" eventType="valueChanged" id="Dhm-EH-yIR"/>
+                                                    </connections>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="SZr-uv-FBh" secondAttribute="bottom" constant="0.5" id="PlD-DT-q0U"/>
+                                                <constraint firstAttribute="trailing" secondItem="SZr-uv-FBh" secondAttribute="trailing" id="qiF-QD-o2r"/>
+                                                <constraint firstItem="SZr-uv-FBh" firstAttribute="leading" secondItem="mI7-rO-tep" secondAttribute="leading" id="r0V-8k-6Ml"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="6KH-lN-npx" id="exF-BI-1a8"/>
@@ -304,6 +382,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateLabel" destination="x0r-aG-GTZ" id="iA2-uV-8mj"/>
+                        <outlet property="datePicker" destination="SZr-uv-FBh" id="Us6-DW-7wj"/>
                         <outlet property="descTextField" destination="DnU-vG-yve" id="wkw-tu-nSm"/>
                         <outlet property="prioLable" destination="DoD-1A-UHW" id="Lec-Gq-iLq"/>
                         <outlet property="titleTextField" destination="Jc2-Nv-PXI" id="CJn-nW-eoP"/>

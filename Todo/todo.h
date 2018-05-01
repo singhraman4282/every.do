@@ -13,4 +13,5 @@
 @property (nonatomic) NSString *taskDescription;
 @property (nonatomic) NSString *priority;
 @property (nonatomic) NSString *status;
+@property (nonatomic) NSDate *deadline;
 @end
